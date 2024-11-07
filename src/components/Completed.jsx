@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/Completed.module.css'; // Import CSS module
+// import styles from '../styles/Completed.module.css'; // Import CSS module
 
 function Completed() {
   return (

@@ -1,7 +1,6 @@
-// src/components/ShoppingCart.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from '../styles/ShoppingCart.module.css'; // Import CSS module
+// import styles from '../styles/ShoppingCart.module.css'; // Import CSS module
 
 function ShoppingCart() {
   const [items, setItems] = useState([]);
@@ -127,7 +126,7 @@ function ShoppingCart() {
         <strong>Total: Rp {calculateTotal().toLocaleString()}</strong>
       </div>
 
-      <button className={styles.completeButton} onClick={handleComplete}>Complete</button>
+      <button className={styles.completeButton} onClick={handleComplete}>Next</button>
     </div>
   );
 }
