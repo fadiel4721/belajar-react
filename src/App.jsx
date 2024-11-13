@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 
+
+
 import viteLogo from '/vite.svg';
-// import './index.css';
 import Login from './components/Login';
-import TodoList from './components/TodoList';
 import ShoppingCart from './components/ShoppingCart';
 import Completed from './components/Completed';
-import HomePage from './components/HomePage';
+
+import TodoList from './components/Todolist';
+
 
 function Navbar() {
   const location = useLocation();
@@ -25,8 +27,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <ul>
-        {/* Kosongkan atau hapus elemen <li> */}
-        
+        <li><Link to="/">Home</Link></li>
       </ul>
     </nav>
   );
@@ -38,12 +39,16 @@ function App() {
       <Navbar />
       
       <Routes>
-      <Route path="/" element={<HomePage />} /> {/* Hanya tampil di rute utama */}
+        <Route path="/" element={<HomePage />} /> {/* Hanya tampil di rute utama */}
         <Route path="/login" element={<Login />} />
         <Route path="/todo-list" element={<TodoList />} />
         <Route path="/shopping-cart" element={<ShoppingCart />} />
         <Route path="/completed" element={<Completed />} />
       </Routes>
+
+      <h1 className="text-3xl font-bold underline text-red-500">
+        Hello world!
+      </h1>
     </Router>
   );
 }
